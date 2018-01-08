@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LMDTextField_Example' do
+  pod 'LMDTextField', :path => '../'
+
+  target 'LMDTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
