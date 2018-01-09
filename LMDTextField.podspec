@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LMDTextField/Classes/**/*'
+  s.source_files = 'LMDTextField/*'
   
   # s.resource_bundles = {
   #   'LMDTextField' => ['LMDTextField/Assets/*.png']

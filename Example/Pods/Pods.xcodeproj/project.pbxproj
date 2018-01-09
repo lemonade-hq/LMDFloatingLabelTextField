@@ -14,7 +14,7 @@
 		9B370B0CAA2FD6C39590B0174D54EF05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A08013117D2C63D6EDBD7A0C7E653216 /* LMDTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CED7F65E6F9B1F76250549EBCDFD573E /* LMDTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B95D2D5765EC309CA23E492383E4DEBC /* Pods-LMDTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2BB1B51C1053911D457356344330CEE /* Pods-LMDTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9CA05E12003B18500D316C8 /* LMDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA05E02003B18400D316C8 /* LMDTextField.swift */; };
+		B9CA05E52004C34000D316C8 /* LMDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA05E42004C34000D316C8 /* LMDTextField.swift */; };
 		E9DC2C0C66A9C9F53EA30C6D8704E570 /* Pods-LMDTextField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B0DAEB12A59FA9AC6803E2AF3BB28 /* Pods-LMDTextField_Example-dummy.m */; };
 		EA263D8C71ADCA646B5F0352AEC71E71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		8DA3D1FC7D93320519D30FC4F84223B4 /* Pods-LMDTextField_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LMDTextField_Tests-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99C48A179EC3706D6DD161CBA44ECB4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9CA05E02003B18400D316C8 /* LMDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LMDTextField.swift; path = Example/../LMDTextField.swift; sourceTree = "<group>"; };
+		B9CA05E42004C34000D316C8 /* LMDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LMDTextField.swift; path = LMDTextField/LMDTextField.swift; sourceTree = "<group>"; };
 		BE0ADB6419114C6C23613CC1011F705F /* Pods_LMDTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMDTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C529827166A4B43BCFE3869ED16A8F0C /* LMDTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LMDTextField-dummy.m"; sourceTree = "<group>"; };
 		C8ABCFA63C6BB32A3D7A8BDEE64CD3F3 /* Pods-LMDTextField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMDTextField_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		58B19F977E9638B9C233D2277E32CC5A /* LMDTextField */ = {
 			isa = PBXGroup;
 			children = (
-				B9CA05E02003B18400D316C8 /* LMDTextField.swift */,
+				B9CA05E42004C34000D316C8 /* LMDTextField.swift */,
 				E990B331740A6BF57988812CFA75887F /* Support Files */,
 			);
 			name = LMDTextField;
@@ -296,6 +296,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					B395175ECB4398F63E7315FC8ABAAEC1 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -330,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E501700FBC58BB1D36D9A5574E37158 /* LMDTextField-dummy.m in Sources */,
-				B9CA05E12003B18500D316C8 /* LMDTextField.swift in Sources */,
+				B9CA05E52004C34000D316C8 /* LMDTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 113B7908650430BA486BE05FCC88CD96 /* LMDTextField.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -639,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 113B7908650430BA486BE05FCC88CD96 /* LMDTextField.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
