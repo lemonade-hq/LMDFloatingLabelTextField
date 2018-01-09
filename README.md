@@ -27,12 +27,12 @@ Install Cocoapods
 $ gem install cocoapods
 ```
 
-Add `TCProgressBar` in your `Podfile`.
+Add `LMDTextField` in your `Podfile`.
 
 ```ruby
 use_frameworks!
 
-pod 'TCProgressBar'
+pod 'LMDTextField'
 ```
 
 Install the pod
@@ -43,20 +43,27 @@ $ pod install
 
 ### Manually
 
-Copy `TCProgressBar` folder to your project. Enjoy.
+Copy `LMDTextField` folder to your project. Enjoy.
 
 ## Customizable Properties
 
 `placeholderText` - Please make sure you put something here. it will look awful without it.
+
 `placeholderFont` - Default is system(14).
+
 `placeholderSizeFactor` - While editing, placeholder will shrink according to this number. deafult is 0.7.
+
 `placeholderTextColor` - Default is - ![#B7B7B7](https://placehold.it/15/B7B7B7/000000?text=+) `#B7B7B7`
+
 `themeColor` - Affects carret and border color while editing. default is ![#FF0083](https://placehold.it/15/FF0083/000000?text=+) `#FF0083`
+
 `textFieldTextColor` - Replaces textColor. default is ![#4A4A4A](https://placehold.it/15/4A4A4A/000000?text=+) `#4A4A4A`
+
 
 ## Author
 
 Tal Cohen, talthent@gmail.com
+
 LEMONADE INC.
 
 ## License
