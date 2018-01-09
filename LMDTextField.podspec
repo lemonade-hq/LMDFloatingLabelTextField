@@ -1,11 +1,3 @@
-#
-# Be sure to run `pod lib lint LMDTextField.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'LMDTextField'
   s.version          = '0.2'
@@ -19,7 +11,7 @@ LMDTextField is a simple, clean TextField with a floating placeholder.
   # s.screenshots     = 'https://github.com/lemonade-hq/LMDTextField/Screenshots/screenshot1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'talthent' => 'talthent@gmail.com' }
-  s.source           = { :git => 'https://github.com/lemonade-hq/LMDTextField.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/lemonade-hq/LMDTextField.git', :branch => s.version, :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.3'
 
