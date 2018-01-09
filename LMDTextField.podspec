@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LMDTextField'
-  s.version          = '0.2'
+  s.version          = '0.3'
   s.summary          = 'Simple TextField with a floating placeholder.'
 
   s.description      = <<-DESC
