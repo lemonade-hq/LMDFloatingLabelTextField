@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import LMDTextField
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: LMDTextField!
+    @IBOutlet weak var usernameTextField: LMDTextField!
+    @IBOutlet weak var passwordTextField: LMDTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.emailTextField.keyboardType = .emailAddress
+        [self.usernameTextField, self.emailTextField, self.passwordTextField]
+            .forEach { $0?.returnKeyType = .next }
+        
+        let tf = LMDTextField(frame: CGRect(x: 20, y: 400, width: 200, height: 48))
+        tf.placeholderText = "placeholder"
+        self.view.addSubview(tf)
     }
 
 }

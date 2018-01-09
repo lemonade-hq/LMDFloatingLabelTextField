@@ -1,0 +1,22 @@
+{
+  "name": "LMDTextField",
+  "version": "0.1.0",
+  "summary": "A short description of LMDTextField.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/talthent-l/LMDTextField",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "talthent-l": "tal.cohen@lemonade.com"
+  },
+  "source": {
+    "git": "https://github.com/talthent-l/LMDTextField.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LMDTextField/Classes/**/*"
+}

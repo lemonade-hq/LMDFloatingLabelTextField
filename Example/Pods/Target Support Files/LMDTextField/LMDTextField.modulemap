@@ -1,0 +1,6 @@
+framework module LMDTextField {
+  umbrella header "LMDTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -22,7 +22,7 @@ pod 'LMDTextField'
 
 ## Author
 
-talthent-l, tal.cohen@lemonade.com
+talthent, talthent@gmail.com
 
 ## License
 

@@ -1,0 +1,16 @@
+PODS:
+  - LMDTextField (0.1.0)
+
+DEPENDENCIES:
+  - LMDTextField (from `../`)
+
+EXTERNAL SOURCES:
+  LMDTextField:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LMDTextField: 327260509bcc305c861692c5901e90f4046f9497
+
+PODFILE CHECKSUM: 7bce36ab8bf95cbad0c269b2c4ab4a7f2634c400
+
+COCOAPODS: 1.3.1
