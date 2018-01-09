@@ -5,11 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
 [![Platform](https://img.shields.io/cocoapods/p/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
 
+## Screenshot
+
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/screenshot1.PNG)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
