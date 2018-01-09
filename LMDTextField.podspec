@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LMDTextField'
-  s.version          = '0.3'
+  s.version          = '0.4'
   s.summary          = 'Simple TextField with a floating placeholder.'
 
   s.description      = <<-DESC
@@ -13,7 +13,7 @@ LMDTextField is a simple, clean TextField with a floating placeholder.
   s.author           = { 'talthent' => 'talthent@gmail.com' }
   s.source           = { :git => 'https://github.com/lemonade-hq/LMDTextField.git', :branch => s.version, :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '8.2'
 
   s.source_files = 'LMDTextField/*'
   
