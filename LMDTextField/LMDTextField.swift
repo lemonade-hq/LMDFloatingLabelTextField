@@ -28,7 +28,7 @@ open class LMDTextField: UITextField {
     fileprivate var notEditingConstraints : [NSLayoutConstraint]!
     
     //MARK: - PUBLIC VARIABLES
-    public var placeholderFont = UIFont.systemFont(ofSize: 14, weight: .light) {
+    public var placeholderFont = UIFont.systemFont(ofSize: 14) {
         didSet {
             self.setNeedsLayout()
         }
@@ -175,16 +175,18 @@ open class LMDTextField: UITextField {
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
-        let point = CGPoint(x: leftPadding,
-                            y: bounds.origin.x + self.textRectYInset)
-        return CGRect(origin: point, size: bounds.size)
+        return CGRect(x: leftPadding,
+                      y: bounds.origin.x + self.textRectYInset,
+                      width: bounds.width - (leftPadding * 2),
+                      height: bounds.height)
     }
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
-        let point = CGPoint(x: leftPadding,
-                            y: bounds.origin.x + self.textRectYInset)
-        return CGRect(origin: point, size: bounds.size)
+        return CGRect(x: leftPadding,
+                      y: bounds.origin.x + self.textRectYInset,
+                      width: bounds.width - (leftPadding * 2),
+                      height: bounds.height)
     }
     
     //MARK: - PUBLIC FUNCTIONS
@@ -197,4 +199,3 @@ open class LMDTextField: UITextField {
     }
     
 }
-
