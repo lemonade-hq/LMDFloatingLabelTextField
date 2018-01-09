@@ -7,11 +7,11 @@
 
 ## Demo
 
-![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.GIF)
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.gif)
 
 ## Screenshot
 
-![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.gif?raw=true)
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/screenshot1.PNG)
 
 ## Example
 
