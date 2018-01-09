@@ -11,7 +11,7 @@
 
 ## Screenshot
 
-![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/screenshot1.PNG)
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.gif?raw=true)
 
 ## Example
 
