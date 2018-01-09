@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
 [![Platform](https://img.shields.io/cocoapods/p/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
 
+## Demo
+
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.GIF)
+
 ## Screenshot
 
 ![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/screenshot1.PNG)
