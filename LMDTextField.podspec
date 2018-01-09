@@ -16,7 +16,7 @@ LMDTextField is a simple, clean TextField with a floating placeholder.
                        DESC
 
   s.homepage         = 'https://github.com/lemonade-hq/LMDTextField'
-  s.screenshots     = 'https://github.com/lemonade-hq/LMDTextField/Screenshots/screenshot1'
+  # s.screenshots     = 'https://github.com/lemonade-hq/LMDTextField/Screenshots/screenshot1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'talthent' => 'talthent@gmail.com' }
   s.source           = { :git => 'https://github.com/lemonade-hq/LMDTextField.git', :tag => s.version.to_s }
