@@ -94,8 +94,8 @@ open class LMDTextField: UITextField {
         self.lmd_placeholder = placeholder
         
         self.notEditingConstraints = [
-            self.lmd_placeholder.leftAnchor.constraint(equalTo: self.leftAnchor, constant: leftPadding),
-            self.lmd_placeholder.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: self.leftPadding),
+            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
         ]
         
         self.animatePlaceholderIfNeeded(with: .notEditing, previousState: nil)
@@ -106,8 +106,8 @@ open class LMDTextField: UITextField {
         let xOffset = (originalWidth - (originalWidth * placeholderSizeFactor)) / 2
         
         self.editingConstraints = [
-            self.lmd_placeholder.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -xOffset + self.leftPadding),
-            self.lmd_placeholder.topAnchor.constraint(equalTo: self.topAnchor, constant: self.topPadding)
+            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: -xOffset + self.leftPadding),
+            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: self.topPadding)
         ]
     }
     

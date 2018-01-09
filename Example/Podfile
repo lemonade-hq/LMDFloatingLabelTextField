@@ -1,5 +1,5 @@
 use_frameworks!
-pod 'LMDTextField'
+pod 'LMDTextField', :path => '../'
 target 'LMDTextField_Example' do
   
 end

@@ -1,22 +1,23 @@
 {
   "name": "LMDTextField",
-  "version": "0.1.0",
-  "summary": "A short description of LMDTextField.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/talthent-l/LMDTextField",
+  "version": "0.3",
+  "summary": "Simple TextField with a floating placeholder.",
+  "description": "LMDTextField is a simple, clean TextField with a floating placeholder.",
+  "homepage": "https://github.com/lemonade-hq/LMDTextField",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "talthent-l": "tal.cohen@lemonade.com"
+    "talthent": "talthent@gmail.com"
   },
   "source": {
-    "git": "https://github.com/talthent-l/LMDTextField.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/lemonade-hq/LMDTextField.git",
+    "branch": "0.3",
+    "tag": "0.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.2"
   },
-  "source_files": "LMDTextField/Classes/**/*"
+  "source_files": "LMDTextField/*"
 }
