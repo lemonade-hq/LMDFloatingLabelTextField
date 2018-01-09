@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-kZ-m76" customClass="LMDTextField" customModule="LMDTextField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-kZ-m76" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
                                 <rect key="frame" x="16" y="80" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -32,7 +32,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Email"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vY-Ec-TrK" customClass="LMDTextField" customModule="LMDTextField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vY-Ec-TrK" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
                                 <rect key="frame" x="16" y="168" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.82293526790000004" green="0.89017857140000001" blue="0.60116148020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,7 +44,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="username"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-Hj-3P8" customClass="LMDTextField" customModule="LMDTextField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-Hj-3P8" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
                                 <rect key="frame" x="16" y="256" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

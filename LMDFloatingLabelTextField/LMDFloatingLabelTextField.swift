@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class LMDTextField: UITextField {
+open class LMDFloatingLabelTextField: UITextField {
     
     public enum State {
         case disabled
