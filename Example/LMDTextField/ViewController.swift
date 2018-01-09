@@ -25,6 +25,5 @@ class ViewController: UIViewController {
         tf.placeholderText = "placeholder"
         self.view.addSubview(tf)
     }
-
 }
 

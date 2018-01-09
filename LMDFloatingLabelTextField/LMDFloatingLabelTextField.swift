@@ -10,7 +10,7 @@ import UIKit
 
 open class LMDTextField: UITextField {
     
-    fileprivate enum State {
+    public enum State {
         case disabled
         case editing
         case notEditing
@@ -52,6 +52,18 @@ open class LMDTextField: UITextField {
         }
     }
     
+    @IBInspectable public  var borderColor: UIColor? = UIColor(white: 74/255, alpha: 1) {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable public  var errorBorderColor: UIColor? = UIColor(red: 1, green: 0, blue: 131/255, alpha: 1) {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
     @IBInspectable public var placeholderTextColor: UIColor = UIColor(white: 183/255, alpha: 1) {
         didSet {
             self.setNeedsLayout()
@@ -64,8 +76,16 @@ open class LMDTextField: UITextField {
         }
     }
     
+    public var error = false {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
     @IBInspectable public var topPadding: CGFloat = 6
     @IBInspectable public var leftPadding: CGFloat = 14
+    
+    
     
     //MARK: - LIFE CYCLE
     override public init(frame: CGRect) {
@@ -113,14 +133,14 @@ open class LMDTextField: UITextField {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
+        self.tintColor = themeColor
         self.lmd_placeholder.font = self.placeholderFont
         self.lmd_placeholder.textColor = self.placeholderTextColor
         self.lmd_placeholder.text = self.placeholderText?.uppercased()
         self.textColor = self.lmd_state == .disabled ? UIColor(white: 183/255, alpha: 1) : self.textFieldTextColor
-        self.tintColor = self.themeColor
         self.backgroundColor = self.lmd_state == .disabled ? UIColor(white: 247/255, alpha: 1) : .white
-        self.layer.borderColor = self.lmd_state == .editing ?
-            self.themeColor?.cgColor :
+        self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.lmd_state == .editing ?
+            self.borderColor?.cgColor :
             UIColor(white: 236/255, alpha: 1).cgColor
         self.isEnabled = self.lmd_state != .disabled
     }
@@ -141,6 +161,7 @@ open class LMDTextField: UITextField {
                 self.text?.isEmpty == true {
                 self.animatePlaceholderToInactivePosition()
             }
+            
         }
         self.setNeedsLayout()
     }
@@ -175,27 +196,25 @@ open class LMDTextField: UITextField {
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
+        let textInset = (self.placeholderText ?? "").isEmpty == true ? 0 : self.textRectYInset
         return CGRect(x: leftPadding,
-                      y: bounds.origin.x + self.textRectYInset,
+                      y: bounds.origin.x + textInset,
                       width: bounds.width - (leftPadding * 2),
                       height: bounds.height)
     }
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
+        let textInset = (self.placeholderText ?? "").isEmpty == true ? 0 : self.textRectYInset
         return CGRect(x: leftPadding,
-                      y: bounds.origin.x + self.textRectYInset,
+                      y: bounds.origin.x + textInset,
                       width: bounds.width - (leftPadding * 2),
                       height: bounds.height)
     }
     
     //MARK: - PUBLIC FUNCTIONS
-    public func disable() {
-        self.lmd_state = .disabled
-    }
-    
-    public func enable() {
-        self.lmd_state = .notEditing
+    public func updateState(_ state: State) {
+        self.lmd_state = state
     }
     
 }

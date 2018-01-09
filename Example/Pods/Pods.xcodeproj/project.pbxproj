@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EEFFCCBC6F18F5813FAB7CDD29B9EBC /* LMDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464FC126474F0B0490B13BCFC9B4307 /* LMDTextField.swift */; };
 		222B02565E20EDD074EA6C49FDD17AA0 /* LMDTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C78EDF7A598C5803715E6DCFBBB73F /* LMDTextField-dummy.m */; };
 		9B370B0CAA2FD6C39590B0174D54EF05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A08013117D2C63D6EDBD7A0C7E653216 /* LMDTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5DD572B7C07E17DD46399C0C02B324 /* LMDTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B95D2D5765EC309CA23E492383E4DEBC /* Pods-LMDTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC31E45C56B637FB635FB2D321795634 /* Pods-LMDTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B966735A2004F7950030C2AA /* LMDFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96673592004F7950030C2AA /* LMDFloatingLabelTextField.swift */; };
 		E9DC2C0C66A9C9F53EA30C6D8704E570 /* Pods-LMDTextField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D26C92BFE7CC26367E722BFCF457B2CF /* Pods-LMDTextField_Example-dummy.m */; };
 		EA263D8C71ADCA646B5F0352AEC71E71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0424F496ED67F6462608CB01C413B858 /* Pods-LMDTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMDTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		149B3983F3028614FABAE9AD67628B21 /* LMDTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LMDTextField.modulemap; sourceTree = "<group>"; };
+		149B3983F3028614FABAE9AD67628B21 /* LMDTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LMDTextField.modulemap; sourceTree = "<group>"; };
 		15C78EDF7A598C5803715E6DCFBBB73F /* LMDTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LMDTextField-dummy.m"; sourceTree = "<group>"; };
 		29D2CD2CFCCF1D64C269DA7B9C123D15 /* Pods-LMDTextField_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LMDTextField_Example-resources.sh"; sourceTree = "<group>"; };
 		2F584D8F28606C801DDF0A04123876C9 /* LMDTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LMDTextField.xcconfig; sourceTree = "<group>"; };
@@ -36,17 +36,17 @@
 		505696BEC337D70FB693AE70ECB7D8A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3BC503734DA4D6A0CFF5D76B40808F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D1555B6C3929796C6FCE6D2D98E45DD /* Pods_LMDTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LMDTextField_Example.framework; path = "Pods-LMDTextField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D1555B6C3929796C6FCE6D2D98E45DD /* Pods_LMDTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMDTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E525391F7E48DE362C9803EF549B3C6 /* LMDTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LMDTextField-prefix.pch"; sourceTree = "<group>"; };
 		A2242A45CFB834F257C68CC527EF46B8 /* Pods-LMDTextField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LMDTextField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A8C5C2D1177801102F64E49A532CB1AE /* Pods-LMDTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LMDTextField_Example.modulemap"; sourceTree = "<group>"; };
+		A8C5C2D1177801102F64E49A532CB1AE /* Pods-LMDTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LMDTextField_Example.modulemap"; sourceTree = "<group>"; };
 		A9EFE7D3C52E49CF80170602FF78B547 /* Pods-LMDTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMDTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B96673592004F7950030C2AA /* LMDFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LMDFloatingLabelTextField.swift; path = LMDFloatingLabelTextField/LMDFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		D26C92BFE7CC26367E722BFCF457B2CF /* Pods-LMDTextField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMDTextField_Example-dummy.m"; sourceTree = "<group>"; };
 		DC31E45C56B637FB635FB2D321795634 /* Pods-LMDTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LMDTextField_Example-umbrella.h"; sourceTree = "<group>"; };
-		E464FC126474F0B0490B13BCFC9B4307 /* LMDTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LMDTextField.swift; path = LMDTextField/LMDTextField.swift; sourceTree = "<group>"; };
 		EF098D9B3369718BB7E8C63BB03E268B /* Pods-LMDTextField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LMDTextField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F7EC946F5AFF53C262D144E9C21DA0C2 /* LMDTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LMDTextField.framework; path = LMDTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EC946F5AFF53C262D144E9C21DA0C2 /* LMDTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMDTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5DD572B7C07E17DD46399C0C02B324 /* LMDTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LMDTextField-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,13 +78,13 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4120AEBAE771F909A18655B5AF465A0A /* LMDTextField */ = {
+		4120AEBAE771F909A18655B5AF465A0A /* LMDFloatingLabelTextField */ = {
 			isa = PBXGroup;
 			children = (
-				E464FC126474F0B0490B13BCFC9B4307 /* LMDTextField.swift */,
+				B96673592004F7950030C2AA /* LMDFloatingLabelTextField.swift */,
 				B7E49C3D16468CA1C038F848C1646C0F /* Support Files */,
 			);
-			name = LMDTextField;
+			name = LMDFloatingLabelTextField;
 			path = ../..;
 			sourceTree = "<group>";
 		};
@@ -102,7 +102,7 @@
 		94EF790125B6F4468BC348E88C5DE86A /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4120AEBAE771F909A18655B5AF465A0A /* LMDTextField */,
+				4120AEBAE771F909A18655B5AF465A0A /* LMDFloatingLabelTextField */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -229,6 +229,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					B395175ECB4398F63E7315FC8ABAAEC1 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -253,8 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B966735A2004F7950030C2AA /* LMDFloatingLabelTextField.swift in Sources */,
 				222B02565E20EDD074EA6C49FDD17AA0 /* LMDTextField-dummy.m in Sources */,
-				0EEFFCCBC6F18F5813FAB7CDD29B9EBC /* LMDTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F584D8F28606C801DDF0A04123876C9 /* LMDTextField.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -496,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F584D8F28606C801DDF0A04123876C9 /* LMDTextField.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
