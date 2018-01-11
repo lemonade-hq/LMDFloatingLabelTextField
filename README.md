@@ -1,9 +1,9 @@
 # LMDTextField
 
-[![CI Status](http://img.shields.io/travis/talthent-l/LMDTextField.svg?style=flat)](https://travis-ci.org/talthent-l/LMDTextField)
-[![Version](https://img.shields.io/cocoapods/v/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
-[![License](https://img.shields.io/cocoapods/l/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
-[![Platform](https://img.shields.io/cocoapods/p/LMDTextField.svg?style=flat)](http://cocoapods.org/pods/LMDTextField)
+[![CI Status](http://img.shields.io/travis/talthent-l/LMDFloatingLabelTextField.svg?style=flat)](https://travis-ci.org/talthent-l/LMDFloatingLabelTextField)
+[![Version](https://img.shields.io/cocoapods/v/LMDFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/LMDFloatingLabelTextField)
+[![License](https://img.shields.io/cocoapods/l/LMDFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/LMDFloatingLabelTextField)
+[![Platform](https://img.shields.io/cocoapods/p/LMDFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/LMDFloatingLabelTextField)
 
 ## Demo
 
@@ -27,12 +27,12 @@ Install Cocoapods
 $ gem install cocoapods
 ```
 
-Add `LMDTextField` in your `Podfile`.
+Add `LMDFloatingLabelTextField` in your `Podfile`.
 
 ```ruby
 use_frameworks!
 
-pod 'LMDTextField'
+pod 'LMDFloatingLabelTextField'
 ```
 
 Install the pod
@@ -43,7 +43,7 @@ $ pod install
 
 ### Manually
 
-Copy `LMDTextField` folder to your project. Enjoy.
+Copy `LMDFloatingLabelTextField` folder to your project. Enjoy.
 
 ## Customizable Properties
 
@@ -55,11 +55,20 @@ Copy `LMDTextField` folder to your project. Enjoy.
 
 `placeholderTextColor` - Default is - ![#B7B7B7](https://placehold.it/15/B7B7B7/000000?text=+) `#B7B7B7`
 
-`themeColor` - Affects carret and border color while editing. default is ![#FF0083](https://placehold.it/15/FF0083/000000?text=+) `#FF0083`
+`themeColor` - Replaces tintColor. Carret color. default is ![#FF0083](https://placehold.it/15/FF0083/000000?text=+) `#FF0083`
+
+`borderColor` - Border color while editing. default is ![#4a4a4a](https://placehold.it/15/4a4a4a/000000?text=+) `#4a4a4a`
+
+`errorBorderColor` - Border color on error. default is ![#FF0083](https://placehold.it/15/FF0083/000000?text=+) `#FF0083`
 
 `textFieldTextColor` - Replaces textColor. default is ![#4A4A4A](https://placehold.it/15/4A4A4A/000000?text=+) `#4A4A4A`
 
+`disabledTextColor` - TextColor when textfield is disabled. default is ![#B7B7B7](https://placehold.it/15/B7B7B7/000000?text=+) `#B7B7B7`
 
+`disabledBackgroundColor` - Background color when textfield is disabled. default is ![#f7f7f7](https://placehold.it/15/f7f7f7/000000?text=+) `#f7f7f7`
+
+`enabledBackgroundColor` - Background color when textfield is not disabled. default is ![#FFFFFF](https://placehold.it/15/FFFFFF/000000?text=+) `#FFFFFF`
+    
 ## Author
 
 Tal Cohen, talthent@gmail.com
@@ -68,4 +77,4 @@ LEMONADE INC.
 
 ## License
 
-LMDTextField is available under the MIT license. See the LICENSE file for more info.
+LMDFloatingLabelTextField is available under the MIT license. See the LICENSE file for more info.
