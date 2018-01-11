@@ -69,6 +69,8 @@ Copy `LMDFloatingLabelTextField` folder to your project. Enjoy.
 
 `enabledBackgroundColor` - Background color when textfield is not disabled. default is ![#FFFFFF](https://placehold.it/15/FFFFFF/000000?text=+) `#FFFFFF`
     
+`error` - Will change border color to `errorBorderColor` regardless of whether the textField is focused or not.
+    
 ## Author
 
 Tal Cohen, talthent@gmail.com
