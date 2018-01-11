@@ -1,5 +1,5 @@
 use_frameworks!
-pod 'LMDTextField', :path => '../'
+pod 'LMDFloatingLabelTextField', :path => '../'
 target 'LMDTextField_Example' do
   
 end

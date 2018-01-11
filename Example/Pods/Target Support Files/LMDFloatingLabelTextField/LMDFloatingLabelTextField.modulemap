@@ -1,0 +1,6 @@
+framework module LMDFloatingLabelTextField {
+  umbrella header "LMDFloatingLabelTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

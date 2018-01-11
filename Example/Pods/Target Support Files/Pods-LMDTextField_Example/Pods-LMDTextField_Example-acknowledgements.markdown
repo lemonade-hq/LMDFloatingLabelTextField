@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## LMDTextField
+## LMDFloatingLabelTextField
 
 Copyright (c) 2018 talthent-l <tal.cohen@lemonade.com>
 

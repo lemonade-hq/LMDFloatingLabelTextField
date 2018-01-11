@@ -1,16 +1,16 @@
 PODS:
-  - LMDTextField (0.3)
+  - LMDFloatingLabelTextField (0.6)
 
 DEPENDENCIES:
-  - LMDTextField (from `../`)
+  - LMDFloatingLabelTextField (from `../`)
 
 EXTERNAL SOURCES:
-  LMDTextField:
+  LMDFloatingLabelTextField:
     :path: ../
 
 SPEC CHECKSUMS:
-  LMDTextField: 61a3b0c6f487066d42f8a3d76cbbf82d9dafbfad
+  LMDFloatingLabelTextField: cf6fe0a4c5f4d092dbaf2c68816cfe61cd39a103
 
-PODFILE CHECKSUM: 4f824468913c0543bc63b5112cb6a66e26bd7f45
+PODFILE CHECKSUM: 1cefb3aefd3557cafd56ee509eca8619a1002cbe
 
 COCOAPODS: 1.3.1

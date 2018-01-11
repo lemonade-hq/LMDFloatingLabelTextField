@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import LMDTextField
+import LMDFloatingLabelTextField
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: LMDTextField!
-    @IBOutlet weak var usernameTextField: LMDTextField!
-    @IBOutlet weak var passwordTextField: LMDTextField!
+    @IBOutlet weak var emailTextField: LMDFloatingLabelTextField!
+    @IBOutlet weak var usernameTextField: LMDFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: LMDFloatingLabelTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,18 @@ class ViewController: UIViewController {
         [self.usernameTextField, self.emailTextField, self.passwordTextField]
             .forEach { $0?.returnKeyType = .next }
         
-        let tf = LMDTextField(frame: CGRect(x: 20, y: 400, width: 200, height: 48))
+        let tf = LMDFloatingLabelTextField(frame: CGRect(x: 20, y: 400, width: 200, height: 48))
         tf.placeholderText = "placeholder"
         self.view.addSubview(tf)
     }
+    
+    @IBAction func error(_ sender: Any) {
+        if let text = usernameTextField?.text, text.count < 6 {
+            self.usernameTextField.error = true
+        }
+        
+        if emailTextField.text?.contains("@") == false {
+            self.emailTextField.error = true
+        }
+    }
 }
-

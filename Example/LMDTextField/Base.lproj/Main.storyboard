@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-kZ-m76" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
-                                <rect key="frame" x="16" y="80" width="343" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-kZ-m76" customClass="LMDFloatingLabelTextField" customModule="LMDFloatingLabelTextField">
+                                <rect key="frame" x="16" y="40" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="88Y-cK-o5U"/>
@@ -32,30 +32,35 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Email"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vY-Ec-TrK" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
-                                <rect key="frame" x="16" y="168" width="343" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vY-Ec-TrK" customClass="LMDFloatingLabelTextField" customModule="LMDFloatingLabelTextField">
+                                <rect key="frame" x="16" y="102" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.82293526790000004" green="0.89017857140000001" blue="0.60116148020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="FuX-lH-PJJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="NHm-cF-eIa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="username"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-Hj-3P8" customClass="LMDFloatingLabelTextField" customModule="LMDTextField">
-                                <rect key="frame" x="16" y="256" width="343" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-Hj-3P8" customClass="LMDFloatingLabelTextField" customModule="LMDFloatingLabelTextField">
+                                <rect key="frame" x="16" y="164" width="343" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="9OX-Dv-ZJ8"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="VRR-RQ-EXR"/>
                                     <constraint firstAttribute="height" constant="48" id="gKm-6a-p5Y"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="password"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5V-a0-Tc8">
+                                <rect key="frame" x="309" y="623" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Validate"/>
+                                <connections>
+                                    <action selector="error:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gg7-n7-0aR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,11 +68,11 @@
                             <constraint firstItem="4vY-Ec-TrK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Bq3-ZI-FNF"/>
                             <constraint firstItem="Bih-Hj-3P8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="COY-wa-GPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GHg-kZ-m76" secondAttribute="trailing" id="KZb-cB-obf"/>
-                            <constraint firstItem="4vY-Ec-TrK" firstAttribute="top" secondItem="GHg-kZ-m76" secondAttribute="bottom" constant="40" id="KrF-FE-sZj"/>
-                            <constraint firstItem="Bih-Hj-3P8" firstAttribute="top" secondItem="4vY-Ec-TrK" secondAttribute="bottom" constant="40" id="UR9-5a-rSe"/>
+                            <constraint firstItem="4vY-Ec-TrK" firstAttribute="top" secondItem="GHg-kZ-m76" secondAttribute="bottom" constant="14" id="KrF-FE-sZj"/>
+                            <constraint firstItem="Bih-Hj-3P8" firstAttribute="top" secondItem="4vY-Ec-TrK" secondAttribute="bottom" constant="14" id="UR9-5a-rSe"/>
                             <constraint firstItem="Bih-Hj-3P8" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aEa-DI-yog"/>
                             <constraint firstItem="GHg-kZ-m76" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="qLz-lR-u69"/>
-                            <constraint firstItem="GHg-kZ-m76" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="udf-Se-6kk"/>
+                            <constraint firstItem="GHg-kZ-m76" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="udf-Se-6kk"/>
                         </constraints>
                     </view>
                     <connections>

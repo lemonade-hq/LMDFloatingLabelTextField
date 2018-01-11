@@ -76,6 +76,24 @@ open class LMDFloatingLabelTextField: UITextField {
         }
     }
     
+    @IBInspectable public var disabledTextColor: UIColor = UIColor(white: 183/255, alpha: 1) {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable public var disabledBackgroundColor: UIColor = UIColor(white: 247/255, alpha: 1) {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable public var enabledBackgroundColor: UIColor = .white {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
+    
     public var error = false {
         didSet {
             self.setNeedsLayout()
@@ -84,8 +102,6 @@ open class LMDFloatingLabelTextField: UITextField {
     
     @IBInspectable public var topPadding: CGFloat = 6
     @IBInspectable public var leftPadding: CGFloat = 14
-    
-    
     
     //MARK: - LIFE CYCLE
     override public init(frame: CGRect) {
@@ -109,6 +125,9 @@ open class LMDFloatingLabelTextField: UITextField {
         
         placeholder.layoutMargins = .zero
         placeholder.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 11.0, *) {
+            placeholder.insetsLayoutMarginsFromSafeArea = false
+        }
         self.addSubview(placeholder)
         
         self.lmd_placeholder = placeholder
@@ -137,8 +156,8 @@ open class LMDFloatingLabelTextField: UITextField {
         self.lmd_placeholder.font = self.placeholderFont
         self.lmd_placeholder.textColor = self.placeholderTextColor
         self.lmd_placeholder.text = self.placeholderText?.uppercased()
-        self.textColor = self.lmd_state == .disabled ? UIColor(white: 183/255, alpha: 1) : self.textFieldTextColor
-        self.backgroundColor = self.lmd_state == .disabled ? UIColor(white: 247/255, alpha: 1) : .white
+        self.textColor = self.lmd_state == .disabled ? self.disabledTextColor : self.textFieldTextColor
+        self.backgroundColor = self.lmd_state == .disabled ? self.disabledBackgroundColor : self.enabledBackgroundColor
         self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.lmd_state == .editing ?
             self.borderColor?.cgColor :
             UIColor(white: 236/255, alpha: 1).cgColor
@@ -152,37 +171,52 @@ open class LMDFloatingLabelTextField: UITextField {
             break
             
         case .editing:
-            if previousState == .notEditing && self.text?.isEmpty == true {
+            if previousState == .notEditing && (self.text ?? "").isEmpty == true {
                 self.animatePlaceholderToActivePosition()
             }
             
         case .notEditing:
-            if (previousState == .editing || previousState == nil) &&
-                self.text?.isEmpty == true {
-                self.animatePlaceholderToInactivePosition()
+            if (self.text ?? "").isEmpty == true {
+                if previousState == .editing {
+                    self.animatePlaceholderToInactivePosition()
+                } else if previousState == nil {
+                    self.animatePlaceholderToInactivePosition(animated: false)
+                }
             }
-            
         }
         self.setNeedsLayout()
     }
     
-    fileprivate func animatePlaceholderToActivePosition() {
-        self.layoutIfNeeded()
+    fileprivate func animatePlaceholderToActivePosition(animated: Bool = true) {
         NSLayoutConstraint.deactivate(self.notEditingConstraints)
         self.calculateEditingConstraints()
         NSLayoutConstraint.activate(self.editingConstraints)
-        UIView.animate(withDuration: 0.2) {
+        let animationBlock = {
             self.layoutIfNeeded()
             self.lmd_placeholder.transform = CGAffineTransform(scaleX: self.placeholderSizeFactor, y: self.placeholderSizeFactor)
         }
+        if animated {
+            UIView.animate(withDuration: 0.2) {
+                animationBlock()
+            }
+        } else {
+            animationBlock()
+        }
     }
     
-    fileprivate func animatePlaceholderToInactivePosition() {
+    fileprivate func animatePlaceholderToInactivePosition(animated: Bool = true) {
         NSLayoutConstraint.deactivate(self.editingConstraints)
         NSLayoutConstraint.activate(self.notEditingConstraints)
-        UIView.animate(withDuration: 0.2) {
+        let animationBlock = {
             self.layoutIfNeeded()
             self.lmd_placeholder.transform = .identity
+        }
+        if animated {
+            UIView.animate(withDuration: 0.2) {
+                animationBlock()
+            }
+        } else {
+            animationBlock()
         }
     }
     
@@ -196,18 +230,18 @@ open class LMDFloatingLabelTextField: UITextField {
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
-        let textInset = (self.placeholderText ?? "").isEmpty == true ? 0 : self.textRectYInset
-        return CGRect(x: leftPadding,
-                      y: bounds.origin.x + textInset,
-                      width: bounds.width - (leftPadding * 2),
-                      height: bounds.height)
+        return self.calculateTextRect(forBounds: bounds)
     }
     
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         super.textRect(forBounds: bounds)
+        return self.calculateTextRect(forBounds: bounds)
+    }
+    
+    fileprivate func calculateTextRect(forBounds bounds: CGRect) -> CGRect {
         let textInset = (self.placeholderText ?? "").isEmpty == true ? 0 : self.textRectYInset
         return CGRect(x: leftPadding,
-                      y: bounds.origin.x + textInset,
+                      y: textInset,
                       width: bounds.width - (leftPadding * 2),
                       height: bounds.height)
     }

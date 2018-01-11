@@ -230,11 +230,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LMDTextField_Example/Pods-LMDTextField_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LMDTextField/LMDTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/LMDFloatingLabelTextField/LMDFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMDTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMDFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
