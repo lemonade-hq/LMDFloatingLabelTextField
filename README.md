@@ -1,4 +1,4 @@
-# LMDTextField
+# LMDFloatingLabelTextField
 
 [![CI Status](http://img.shields.io/travis/talthent-l/LMDFloatingLabelTextField.svg?style=flat)](https://travis-ci.org/talthent-l/LMDFloatingLabelTextField)
 [![Version](https://img.shields.io/cocoapods/v/LMDFloatingLabelTextField.svg?style=flat)](http://cocoapods.org/pods/LMDFloatingLabelTextField)
