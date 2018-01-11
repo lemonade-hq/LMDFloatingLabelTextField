@@ -9,6 +9,10 @@
 
 ![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo.gif)
 
+## Demo #2
+
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/demo2.gif)
+
 ## Screenshot
 
 ![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/screenshot1.PNG)
@@ -45,6 +49,40 @@ $ pod install
 
 Copy `LMDFloatingLabelTextField` folder to your project. Enjoy.
 
+## Usage
+
+### Interface Builder
+- Drag a `UITextField` to you view, and change its class to `LMDFloatingLabelTextField`
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/class_rename.png)
+
+- Click Attributes Inspector ![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/attributesInspector.png)
+ and notice the new `Progress Bar` section on top
+ 
+![alt text](https://github.com/lemonade-hq/LMDTextField/blob/master/Screenshots/inspector_attributes.png)
+
+### Code
+- Create a new `LMDFloatingLabelTextField`
+```swift
+let textfield = LMDFloatingLabelTextField(frame: CGRect(x: 0,
+                                              y: 0,
+                                              width: 200,
+                                              height: 48))
+```
+- Set the values as you like
+```swift
+textfield.placeholderText = "Email"
+textfield.borderColor = .yellow
+textfield.errorBorderColor = .cyan
+textfield.themeColor = .red
+```
+   
+   - Add `LMDFloatingLabelTextField` to the view
+```swift
+self.view.addSubview(textfield)
+```
+   
+That's it!
+   
 ## Customizable Properties
 
 `placeholderText` - Please make sure you put something here. it will look awful without it.
