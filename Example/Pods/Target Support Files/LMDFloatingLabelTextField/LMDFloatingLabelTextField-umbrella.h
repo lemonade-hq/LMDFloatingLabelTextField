@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LMDTextFieldVersionNumber;
-FOUNDATION_EXPORT const unsigned char LMDTextFieldVersionString[];
+FOUNDATION_EXPORT double LMDFloatingLabelTextFieldVersionNumber;
+FOUNDATION_EXPORT const unsigned char LMDFloatingLabelTextFieldVersionString[];
 

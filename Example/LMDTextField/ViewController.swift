@@ -7,24 +7,33 @@
 //
 
 import UIKit
-import LMDTextField
+import LMDFloatingLabelTextField
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var emailTextField: LMDTextField!
-    @IBOutlet weak var usernameTextField: LMDTextField!
-    @IBOutlet weak var passwordTextField: LMDTextField!
+    
+    weak var textField: LMDFloatingLabelTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailTextField.keyboardType = .emailAddress
-        [self.usernameTextField, self.emailTextField, self.passwordTextField]
-            .forEach { $0?.returnKeyType = .next }
-        
-        let tf = LMDTextField(frame: CGRect(x: 20, y: 400, width: 200, height: 48))
+        let tf = LMDFloatingLabelTextField(frame: CGRect(x: 20, y: 400, width: 200, height: 48))
         tf.placeholderText = "placeholder"
+        self.textField = tf
+        tf.text = "Prefilled field"
         self.view.addSubview(tf)
     }
-
+    @IBAction func errorSwitchValueChanged(_ errorSwitch: UISwitch) {
+        self.textField.error = errorSwitch.isOn
+    }
+    
+    @IBAction func enableButtonTapped(_ sender: Any) {
+        self.textField.disabled = false
+    }
+    
+    @IBAction func disableButtonTapped(_ sender: Any) {
+        self.textField.disabled = true
+    }
+    
+    @IBAction func endEditingButtonTapped(_ sender: Any) {
+        self.textField.endEditing(true)
+    }
 }
-

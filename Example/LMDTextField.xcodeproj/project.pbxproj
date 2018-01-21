@@ -13,6 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B991F2FB2005024400D4FE8A /* LMDFloatingLabelTextField.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B991F2FA2005024300D4FE8A /* LMDFloatingLabelTextField.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,9 @@
 		845C104563584D33068DAF76 /* Pods_LMDTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMDTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAED1965D4C7747D852F7A1 /* Pods-LMDTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMDTextField_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMDTextField_Tests/Pods-LMDTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B65A5F1420CC911B2D3B9FE6 /* Pods-LMDTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMDTextField_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMDTextField_Example/Pods-LMDTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B991F2FA2005024300D4FE8A /* LMDFloatingLabelTextField.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LMDFloatingLabelTextField.podspec; path = ../LMDFloatingLabelTextField.podspec; sourceTree = "<group>"; };
 		C83A5E39282AEB0B002D6B4F /* Pods-LMDTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMDTextField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMDTextField_Example/Pods-LMDTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CD0FB26FBE66202754D08035 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CF0C12641DD6988083256D8A /* LMDTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LMDTextField.podspec; path = ../LMDTextField.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +101,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				CF0C12641DD6988083256D8A /* LMDTextField.podspec */,
+				B991F2FA2005024300D4FE8A /* LMDFloatingLabelTextField.podspec */,
 				CD0FB26FBE66202754D08035 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -180,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B991F2FB2005024400D4FE8A /* LMDFloatingLabelTextField.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -228,11 +230,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LMDTextField_Example/Pods-LMDTextField_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LMDTextField/LMDTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/LMDFloatingLabelTextField/LMDFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMDTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMDFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
