@@ -147,7 +147,7 @@ open class LMDFloatingLabelTextField: UITextField {
         
         self.notEditingConstraints = [
             NSLayoutConstraint(item: self.lmd_placeholder, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: self.leftPadding),
-            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+            NSLayoutConstraint(item: self.lmd_placeholder, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: self.frame.height / 2)
         ]
         NSLayoutConstraint.activate(self.notEditingConstraints)
         self.activeConstraints = self.notEditingConstraints
