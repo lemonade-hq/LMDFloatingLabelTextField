@@ -10,14 +10,14 @@ import UIKit
 
 open class LMDFloatingLabelTextField: UITextField {
     
-    public enum State {
+    public enum Step {
         case editing
         case notEditing
     }
     
-    fileprivate var lmd_state : State = .notEditing {
+    fileprivate var step : Step = .notEditing {
         didSet {
-            self.animatePlaceholderIfNeeded(with: lmd_state)
+            self.animatePlaceholderIfNeeded(with: step)
         }
     }
     
@@ -36,14 +36,14 @@ open class LMDFloatingLabelTextField: UITextField {
     
     open override var text: String? {
         didSet {
-            self.animatePlaceholderIfNeeded(with: self.lmd_state)
+            self.animatePlaceholderIfNeeded(with: self.step)
         }
     }
     
     @IBInspectable public var placeholderText: String? {
         didSet {
             self.lmd_placeholder.text = placeholderText
-            self.animatePlaceholderIfNeeded(with: self.lmd_state)
+            self.animatePlaceholderIfNeeded(with: self.step)
         }
     }
     
@@ -103,7 +103,7 @@ open class LMDFloatingLabelTextField: UITextField {
     
     public var disabled = false {
         didSet {
-            self.updateState(.notEditing)
+            self.updateStep(.notEditing)
         }
     }
     
@@ -176,16 +176,15 @@ open class LMDFloatingLabelTextField: UITextField {
         self.lmd_placeholder.text = self.placeholderText?.uppercased()
         self.textColor = self.disabled ? self.disabledTextColor : self.textFieldTextColor
         self.backgroundColor = self.disabled ? self.disabledBackgroundColor : self.enabledBackgroundColor
-        self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.lmd_state == .editing ?
+        self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.step == .editing ?
             self.borderColor?.cgColor :
             UIColor(white: 236/255, alpha: 1).cgColor
         self.isEnabled = !self.disabled
     }
     
-//    fileprivate func animatePlaceholderIfNeeded(with state: State, previousState: State?) {
-    fileprivate func animatePlaceholderIfNeeded(with state: State) {
+    fileprivate func animatePlaceholderIfNeeded(with step: Step) {
         
-        switch state {
+        switch step {
         case .editing:
             self.animatePlaceholderToActivePosition()
         case .notEditing:
@@ -196,29 +195,6 @@ open class LMDFloatingLabelTextField: UITextField {
             }
         }
         self.setNeedsLayout()
-    
-//        guard state != previousState else { return }
-//        switch state {
-//        case .disabled:
-//            break
-//
-//        case .editing:
-//            if previousState == .notEditing && (self.text ?? "").isEmpty == true {
-//                self.animatePlaceholderToActivePosition()
-//            } else if previousState == nil {
-//                self.animatePlaceholderToActivePosition(animated: false)
-//            }
-//
-//        case .notEditing:
-//            if (self.text ?? "").isEmpty == true {
-//                if previousState == .editing {
-//                    self.animatePlaceholderToInactivePosition()
-//                } else if previousState == nil {
-//                    self.animatePlaceholderToInactivePosition(animated: false)
-//                }
-//            }
-//        }
-//        self.setNeedsLayout()
     }
     
     fileprivate func animatePlaceholderToActivePosition(animated: Bool = true) {
@@ -260,11 +236,11 @@ open class LMDFloatingLabelTextField: UITextField {
     }
     
     @objc private func editingDidBegin() {
-        self.lmd_state = .editing
+        self.step = .editing
     }
     
     @objc private func editingDidEnd() {
-        self.lmd_state = .notEditing
+        self.step = .notEditing
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -286,8 +262,8 @@ open class LMDFloatingLabelTextField: UITextField {
     }
     
     //MARK: - PUBLIC FUNCTIONS
-    public func updateState(_ state: State) {
-        self.lmd_state = state
+    public func updateStep(_ step: Step) {
+        self.step = step
     }
     
 }
